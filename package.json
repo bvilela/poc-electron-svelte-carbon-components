@@ -1,0 +1,34 @@
+{
+  "name": "list-builder-files-private",
+  "version": "1.0.0",
+  "description": "User Interface for the List Builder project",
+  "author": "Bruno Vilela",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "index.cjs",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "__start": "sirv public --no-clear",
+    "start": "electron .",
+    "dist": "npm run build && electron-builder --win -p always"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.0",
+    "carbon-components-svelte": "^0.73.4",
+    "electron": "^23.2.0",
+    "electron-builder": "^23.6.0",
+    "rollup": "^3.15.0",
+    "rollup-plugin-css-only": "^4.3.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.1.2",
+    "svelte": "^3.55.0",
+    "svelte-grid-responsive": "^1.2.4"
+  },
+  "dependencies": {
+    "sirv-cli": "^2.0.0"
+  }
+}
